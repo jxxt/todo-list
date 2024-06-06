@@ -14,26 +14,34 @@
 </head>
 
 <body>
+
     <div class="inside-container">
         <div class="start">
             <div class="daily">daily</div>
             <div class="todo">TODO list</div>
             <div class="line1">plan your day already!</div>
             <div class="line2">add today's schedule right now!</div>
-            <div class="add-btn"><button>start</button></div>
+            <div class="add-btn"><button>begin</button></div>
         </div>
 
-        <div class="add-to-list">
+        <div class="add-to-list hide">
             <div class="ins">add your tasks:</div>
             <div class="add-tasks">
-                <!-- <div class="added-task">
-                    <div class="added-priority">🟢</div>
-                    <div class="added-name">dflkshjfk</div>
-                </div> -->
+                <div class="all-tasks">
+                    <!-- <div class="added-task">
+                        <div class="added-priority">🟢</div>
+                        <div class="added-name">dflkshjfk</div>
+                    </div>
+                    <div class="added-task">
+                        <div class="added-priority">🟢</div>
+                        <div class="added-name">dflkshjfk</div>
+                    </div> -->
+                </div>
                 <div class="blank">
-                    <div class="text"><input type="text" name="task-name" placeholder="type here..."></div>
+                    <div class="text"><input class="input-text" type="text" name="task-name" placeholder="type here...">
+                    </div>
                     <div class="priority">
-                        <select name="priority-select">
+                        <select class="priority-select" name="priority-select">
                             <option value="low">🟢</option>
                             <option value="medium">🟡</option>
                             <option value="high">🔴</option>
