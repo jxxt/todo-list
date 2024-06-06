@@ -61,3 +61,38 @@ body {
     font-size: 30px;
     margin-top: 12px;
 }
+
+.start {
+    display: none;
+}
+
+.add-to-list {
+    height: 500px;
+    width: 270px;
+    background-color: rgb(112, 107, 107);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ins {
+    font-size: 30px;
+    padding-top: 20px;
+    background-color: black;
+    height: 50px;
+}
+
+.add-tasks {
+    flex: 1;
+}
+
+.hint {
+    font-size: 15px;
+    /* background-color: black; */
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    
+}
