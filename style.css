@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Tiny5", sans-serif;
+}
+
+body {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.inside-container {
+    background-color: gray;
+    color: blanchedalmond;
+    width: 360px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.daily {
+    font-size: 70px;
+}
+
+.todo {
+    font-size: 80px;
+    padding-bottom: 50px;
+}
+
+.line1,
+.line2 {
+    font-size: 26px;
+}
+
+.add-btn {
+    padding-top: 30px;
+}
+
+.add-btn button {
+    font-size: 40px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: blanchedalmond;
+    border: 3px solid black;
+}
+
+.add-btn button:active {
+    font-size: 30px;
+    margin-top: 12px;
+}
+
+/* .start {
+    display: none;
+} */
+
+.add-to-list {
+    height: 500px;
+    width: 270px;
+    background-color: rgb(112, 107, 107);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ins {
+    font-size: 30px;
+    padding-top: 20px;
+    /* background-color: black; */
+    height: 50px;
+}
+
+.add-tasks {
+    flex: 1;
+    /* background-color: blue; */
+    margin: 10px 0;
+    width: 80%;
+}
+
+.all-tasks {
+    padding-bottom: 12px;
+}
+
+.added-task {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.added-name {
+    margin-top: 4px;
+}
+
+.blank {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    width: 70%;
+    font-size: 20px;
+    border-bottom: 2px solid blanchedalmond;
+}
+
+.text input {
+    all: unset ;
+}
+
+::placeholder {
+    color: rgba(255, 235, 205, 0.497);
+}
+
+.priority select {
+    background-color: rgb(112, 107, 107);
+    border: 1px solid blanchedalmond;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.plus-btn {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.plus-btn img {
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* .plus-btn img:active {
+    background-color: gainsboro;
+} */
+
+.done-btn {
+    padding-bottom: 20px;
+}
+
+.done-btn button {
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgb(69, 64, 64);
+    border: 3px solid blanchedalmond;
+    color: blanchedalmond;
+}
+
+.hint {
+    font-size: 15px;
+    /* background-color: black; */
+    height: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.hide {
+    display: none;
+}
