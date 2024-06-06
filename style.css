@@ -80,12 +80,92 @@ body {
 .ins {
     font-size: 30px;
     padding-top: 20px;
-    background-color: black;
+    /* background-color: black; */
     height: 50px;
 }
 
 .add-tasks {
     flex: 1;
+    /* background-color: blue; */
+    margin: 10px 0;
+    width: 80%;
+}
+
+.added-task {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+}
+
+.added-name {
+    margin-top: 4px;
+}
+
+.blank {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    width: 70%;
+    font-size: 20px;
+    border-bottom: 2px solid blanchedalmond;
+}
+
+.text input {
+    all: unset ;
+}
+
+::placeholder {
+    color: rgba(255, 235, 205, 0.497);
+}
+
+.priority select {
+    background-color: rgb(112, 107, 107);
+    border: 1px solid blanchedalmond;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.plus-btn {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.plus-btn img {
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* .plus-btn img:active {
+    background-color: gainsboro;
+} */
+
+
+
+
+
+
+
+
+
+.done-btn {
+    padding-bottom: 20px;
+}
+
+.done-btn button {
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgb(69, 64, 64);
+    border: 3px solid blanchedalmond;
+    color: blanchedalmond;
 }
 
 .hint {
@@ -94,5 +174,4 @@ body {
     height: 30px;
     display: flex;
     gap: 10px;
-    
 }
