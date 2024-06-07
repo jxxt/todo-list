@@ -221,15 +221,24 @@ body {
 }
 
 .todo-task {
+    width: 100%;
     display: flex;
     gap: 10px;
     padding-bottom: 5px;
+
 }
 
 .list-container .todo-task {
     font-size: 30px;
 }
 
+.warning {
+    color: red;
+    font-size: 12px;
+    padding-top: 3px;
+}
+
 .hide {
     display: none;
 }
+

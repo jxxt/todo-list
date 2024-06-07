@@ -7,6 +7,7 @@ const tempDB = {
 
 const todoList = document.querySelector(".todo-list")
 const listCon = document.querySelector(".list-container")
+const start = document.querySelector(".start")
 
 const checkDB = () => {
     let todayDate = extractDate()
@@ -26,7 +27,6 @@ const checkDB = () => {
     }
     else {
         start.classList.remove('hide');
-        console.log("HKJ");
     }
 
 }
@@ -43,10 +43,10 @@ const extractDate = () => {
 
 checkDB()
 
-const start = document.querySelector(".start")
 const addToList = document.querySelector(".add-to-list")
 
 const addBtn = document.querySelector(".add-btn")
+const warning = document.querySelector(".warning")
 
 addBtn.addEventListener("click", () => {
     start.classList.add("hide")
@@ -63,25 +63,34 @@ const plusBtn = document.querySelector(".plus-btn")
 
 const allTasks = document.querySelector(".all-tasks")
 
-
+inputText.addEventListener("focus", () => {
+    warning.classList.add('hide');
+})
 
 plusBtn.addEventListener("click", () => {
-    // if (inputText.value == "") { console.log("khljj") }
-    console.log(inputText.value)
-    console.log(inputPriority.value)
+    if (inputText.value == "") {
+        warning.classList.remove('hide');
+    }
 
-    let text = inputText.value
+    else {
+        // console.log(inputText.value)
+        // console.log(inputPriority.value)
 
-    if (inputPriority.value == "low") { priority = "🟢" }
-    else if (inputPriority.value == "medium") { priority = "🟡" }
-    else if (inputPriority.value == "high") { priority = "🔴" }
+        warning.classList.add('hide');
 
-    add(text, priority)
+        let text = inputText.value
 
-    addToObject(text, priority)
-    console.log(tempDB)
+        if (inputPriority.value == "low") { priority = "🟢" }
+        else if (inputPriority.value == "medium") { priority = "🟡" }
+        else if (inputPriority.value == "high") { priority = "🔴" }
 
-    inputText.value = ""
+        add(text, priority)
+
+        addToObject(text, priority)
+        console.log(tempDB)
+
+        inputText.value = ""
+    }
 })
 
 const add = (a, b) => {
@@ -124,5 +133,3 @@ viewBtn.addEventListener("click", () => {
 
     checkDB()
 })
-
-
