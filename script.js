@@ -60,11 +60,11 @@ const addToObject = (a, b) => {
 }
 
 const extractDate = () => {
-    const d = new Date();
+    const d = new Date()
 
-    const currentDate = d.getDate();
-    const currentMonth = d.getMonth() + 1;
-    const currentYear = d.getFullYear();
+    const currentDate = d.getDate()
+    const currentMonth = d.getMonth() + 1
+    const currentYear = d.getFullYear()
 
     return `${currentDate}-${currentMonth}-${currentYear}`
 }
@@ -79,7 +79,30 @@ addToLocalStorage = () => {
 }
 
 const dontBtn = document.querySelector(".done-btn button")
+const successful = document.querySelector(".successful")
+
 
 dontBtn.addEventListener("click", () => {
     addToLocalStorage()
+
+    addToList.classList.add("hide")
+    successful.classList.remove("hide")
 })
+
+const viewBtn = document.querySelector(".view-btn")
+
+viewBtn.addEventListener("click", () => {
+    successful.classList.add('hide');
+})
+
+const checkDB = () => {
+    let todayDate = extractDate
+    if (localStorage.getItem(todayDate) !== null) {
+        
+    }
+    else {
+        start.classList.remove('hide');
+
+    }
+
+}

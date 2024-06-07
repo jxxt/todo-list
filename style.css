@@ -120,7 +120,7 @@ body {
 }
 
 .text input {
-    all: unset ;
+    all: unset;
 }
 
 ::placeholder {
@@ -172,6 +172,29 @@ body {
     gap: 10px;
 }
 
+.successful {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.successful .a,
+.successful .b {
+    font-size: 40px;
+}
+
+.view-btn button {
+    margin-top: 20px;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: blanchedalmond;
+    border: 3px solid black;
+}
+
 .hide {
     display: none;
 }
+
