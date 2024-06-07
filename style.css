@@ -173,7 +173,7 @@ body {
 }
 
 .successful {
-    display: flex;  
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -194,7 +194,42 @@ body {
     border: 3px solid black;
 }
 
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.lline {
+    height: 100px;
+    /* background-color: black; */
+    padding-bottom: 50px;
+}
+
+.lline1 {
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-task {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.list-container .todo-task {
+    font-size: 30px;
+}
+
 .hide {
     display: none;
 }
-
