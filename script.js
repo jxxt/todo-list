@@ -1,3 +1,5 @@
+const database = new Object()
+
 const start = document.querySelector(".start")
 const addToList = document.querySelector(".add-to-list")
 
@@ -27,6 +29,12 @@ plusBtn.addEventListener("click", () => {
     else if (inputPriority.value == "high") { priority = "🔴" }
 
     add(text, priority)
+
+    const tempObject = {
+        
+    }
+
+    inputText.value = ""
 })
 
 const add = (a, b) => {
@@ -36,3 +44,14 @@ const add = (a, b) => {
 
     allTasks.appendChild(element)
 }
+
+const extractDate = () => {
+    const d = new Date();
+
+    const currentDate = d.getDate();
+    const currentMonth = d.getMonth() + 1;
+    const currentYear = d.getFullYear();
+
+    return `${currentDate}-${currentMonth}-${currentYear}`
+}
+
