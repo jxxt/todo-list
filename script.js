@@ -1,4 +1,4 @@
-const database = new Object()
+// const database = new Object()
 
 const start = document.querySelector(".start")
 const addToList = document.querySelector(".add-to-list")
@@ -17,6 +17,11 @@ const plusBtn = document.querySelector(".plus-btn")
 
 const allTasks = document.querySelector(".all-tasks")
 
+const tempDB = {
+    task: [],
+    priority: []
+}
+
 plusBtn.addEventListener("click", () => {
     // if (inputText.value == "") { console.log("khljj") }
     console.log(inputText.value)
@@ -30,9 +35,8 @@ plusBtn.addEventListener("click", () => {
 
     add(text, priority)
 
-    const tempObject = {
-        
-    }
+    addToObject(text, priority)
+    console.log(tempDB)
 
     inputText.value = ""
 })
@@ -43,6 +47,11 @@ const add = (a, b) => {
     element.innerHTML = `<div class="added-task"><div class="added-priority">${b}</div><div class="added-name">${a}</div></div>`
 
     allTasks.appendChild(element)
+}
+
+const addToObject = (a, b) => {
+    tempDB.task.push(a)
+    tempDB.priority.push(b)
 }
 
 const extractDate = () => {
