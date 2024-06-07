@@ -87,7 +87,7 @@ plusBtn.addEventListener("click", () => {
         add(text, priority)
 
         addToObject(text, priority)
-        console.log(tempDB)
+        // console.log(tempDB)
 
         inputText.value = ""
     }
@@ -108,11 +108,11 @@ const addToObject = (a, b) => {
 
 addToLocalStorage = () => {
     let todayDate = extractDate()
-    console.log(todayDate)
-    console.log(tempDB)
+    // console.log(todayDate)
+    // console.log(tempDB)
 
     localStorage.setItem(todayDate, JSON.stringify(tempDB));
-    console.log(localStorage.getItem(todayDate))
+    // console.log(localStorage.getItem(todayDate))
 }
 
 const dontBtn = document.querySelector(".done-btn button")
