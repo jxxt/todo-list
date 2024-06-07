@@ -1,5 +1,10 @@
 // const database = new Object()
 
+const tempDB = {
+    task: [],
+    priority: []
+}
+
 const start = document.querySelector(".start")
 const addToList = document.querySelector(".add-to-list")
 
@@ -8,6 +13,9 @@ const addBtn = document.querySelector(".add-btn")
 addBtn.addEventListener("click", () => {
     start.classList.add("hide")
     addToList.classList.remove("hide")
+
+    tempDB.task = []
+    tempDB.priority = []
 })
 
 const inputText = document.querySelector(".input-text")
@@ -17,10 +25,7 @@ const plusBtn = document.querySelector(".plus-btn")
 
 const allTasks = document.querySelector(".all-tasks")
 
-const tempDB = {
-    task: [],
-    priority: []
-}
+
 
 plusBtn.addEventListener("click", () => {
     // if (inputText.value == "") { console.log("khljj") }
@@ -64,3 +69,17 @@ const extractDate = () => {
     return `${currentDate}-${currentMonth}-${currentYear}`
 }
 
+addToLocalStorage = () => {
+    let todayDate = extractDate()
+    console.log(todayDate)
+    console.log(tempDB)
+
+    localStorage.setItem(todayDate, JSON.stringify(tempDB));
+    console.log(localStorage.getItem(todayDate))
+}
+
+const dontBtn = document.querySelector(".done-btn button")
+
+dontBtn.addEventListener("click", () => {
+    addToLocalStorage()
+})
