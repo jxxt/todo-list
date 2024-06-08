@@ -1,6 +1,13 @@
 import extractDate from './extractDate';
+import dom from './dom';
 
 export default function checkLS() {
+    const {
+        todoList,
+        listCon,
+        start,
+    } = dom();
+
     let todayDate = extractDate()
     if (localStorage.getItem(todayDate) !== null) {
 
