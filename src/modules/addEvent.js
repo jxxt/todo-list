@@ -1,13 +1,11 @@
 import checkLS from './checkLS';
 import extractDate from './extractDate';
 import dom from './dom';
-import resetObj from './resetObj';
 
 export default function addEvent() {
     const {
         start,
         addToList,
-        addBtn,
         warning,
         inputText,
         inputPriority,
@@ -17,6 +15,9 @@ export default function addEvent() {
         successful,
         viewBtn,
     } = dom()
+    const addBtn = document.querySelector(".add-btn")
+
+    console.log(addBtn);
 
     const tempDB = {
         task: [],
@@ -27,7 +28,8 @@ export default function addEvent() {
         start.classList.add("hide")
         addToList.classList.remove("hide")
 
-        resetObj()
+        tempDB.task = []
+        tempDB.priority = []
     })
 
     inputText.addEventListener("focus", () => {
@@ -46,6 +48,7 @@ export default function addEvent() {
             warning.classList.add('hide');
 
             let text = inputText.value
+            let priority
 
             if (inputPriority.value == "low") { priority = "🟢" }
             else if (inputPriority.value == "medium") { priority = "🟡" }
@@ -73,7 +76,7 @@ export default function addEvent() {
         tempDB.priority.push(b)
     }
 
-    addToLocalStorage = () => {
+    const addToLocalStorage = () => {
         let todayDate = extractDate()
         // console.log(todayDate)
         // console.log(tempDB)
