@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Tiny5";
+    src: url('./Tiny5.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -241,4 +246,3 @@ body {
 .hide {
     display: none;
 }
-
