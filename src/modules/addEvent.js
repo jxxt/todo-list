@@ -6,6 +6,7 @@ export default function addEvent() {
     const {
         start,
         addToList,
+        addBtn,
         warning,
         inputText,
         inputPriority,
@@ -15,9 +16,6 @@ export default function addEvent() {
         successful,
         viewBtn,
     } = dom()
-    const addBtn = document.querySelector(".add-btn")
-
-    console.log(addBtn);
 
     const tempDB = {
         task: [],
@@ -76,18 +74,18 @@ export default function addEvent() {
         let todayDate = extractDate()
 
         localStorage.setItem(todayDate, JSON.stringify(tempDB))
-
-        dontBtn.addEventListener("click", () => {
-            addToLocalStorage()
-
-            addToList.classList.add("hide")
-            successful.classList.remove("hide")
-        })
-
-        viewBtn.addEventListener("click", () => {
-            successful.classList.add('hide')
-
-            checkLS()
-        })
     }
+
+    dontBtn.addEventListener("click", () => {
+        addToLocalStorage()
+
+        addToList.classList.add("hide")
+        successful.classList.remove("hide")
+    })
+
+    viewBtn.addEventListener("click", () => {
+        successful.classList.add('hide')
+
+        checkLS()
+    })
 }
