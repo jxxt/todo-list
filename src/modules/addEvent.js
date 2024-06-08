@@ -42,9 +42,6 @@ export default function addEvent() {
         }
 
         else {
-            // console.log(inputText.value)
-            // console.log(inputPriority.value)
-
             warning.classList.add('hide');
 
             let text = inputText.value
@@ -57,7 +54,6 @@ export default function addEvent() {
             add(text, priority)
 
             addToObject(text, priority)
-            // console.log(tempDB)
 
             inputText.value = ""
         }
@@ -78,23 +74,20 @@ export default function addEvent() {
 
     const addToLocalStorage = () => {
         let todayDate = extractDate()
-        // console.log(todayDate)
-        // console.log(tempDB)
 
-        localStorage.setItem(todayDate, JSON.stringify(tempDB));
-        // console.log(localStorage.getItem(todayDate))
+        localStorage.setItem(todayDate, JSON.stringify(tempDB))
+
+        dontBtn.addEventListener("click", () => {
+            addToLocalStorage()
+
+            addToList.classList.add("hide")
+            successful.classList.remove("hide")
+        })
+
+        viewBtn.addEventListener("click", () => {
+            successful.classList.add('hide')
+
+            checkLS()
+        })
     }
-
-    dontBtn.addEventListener("click", () => {
-        addToLocalStorage()
-
-        addToList.classList.add("hide")
-        successful.classList.remove("hide")
-    })
-
-    viewBtn.addEventListener("click", () => {
-        successful.classList.add('hide');
-
-        checkLS()
-    })
-};
+}
