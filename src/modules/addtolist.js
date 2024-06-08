@@ -1,4 +1,4 @@
-import plusImg from '../plus.svg'
+import plusImg from '../assets/plus.svg'
 
 export default function addtolist() {
     const container = document.querySelector(".inside-container")
