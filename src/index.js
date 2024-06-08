@@ -7,6 +7,7 @@ import successful from './modules/successful';
 import todolist from './modules/todolist';
 
 import checkLS from './modules/checkLS';
+import addEvent from './modules/addEvent';
 
 container()
 start()
@@ -15,3 +16,4 @@ successful()
 todolist()
 
 checkLS()
+addEvent()

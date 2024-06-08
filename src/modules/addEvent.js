@@ -1,6 +1,7 @@
 import checkLS from './checkLS';
 import extractDate from './extractDate';
 import dom from './dom';
+import resetObj from './resetObj';
 
 export default function addEvent() {
     const {
@@ -26,8 +27,7 @@ export default function addEvent() {
         start.classList.add("hide")
         addToList.classList.remove("hide")
 
-        tempDB.task = []
-        tempDB.priority = []
+        resetObj()
     })
 
     inputText.addEventListener("focus", () => {
