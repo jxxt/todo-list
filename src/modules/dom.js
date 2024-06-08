@@ -1,0 +1,15 @@
+export default function dom() {
+    const todoList = document.querySelector(".todo-list")
+    const listCon = document.querySelector(".list-container")
+    const start = document.querySelector(".start")
+    const addToList = document.querySelector(".add-to-list")
+    const addBtn = document.querySelector(".add-btn")
+    const warning = document.querySelector(".warning")
+    const inputText = document.querySelector(".input-text")
+    const inputPriority = document.querySelector(".priority-select")
+    const plusBtn = document.querySelector(".plus-btn")
+    const allTasks = document.querySelector(".all-tasks")
+    const dontBtn = document.querySelector(".done-btn button")
+    const successful = document.querySelector(".successful")
+    const viewBtn = document.querySelector(".view-btn")
+};
